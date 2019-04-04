@@ -1,0 +1,6 @@
+<h1>Welcome to the Record Store</h1>
+<%= unless @conn.assigns[:current_user] do %>
+  <p>
+    <%= link "Sign in", to: Routes.session_path(@conn, :new) %> to the Record Store
+  </p>
+<% end %>
